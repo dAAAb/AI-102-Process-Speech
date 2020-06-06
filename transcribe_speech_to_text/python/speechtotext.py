@@ -5,6 +5,7 @@ import time
 # Replace with your own subscription key and service region (e.g., "westus").
 speech_key, service_region = "3ebb5f6b1c2f4c59b32b4abd9dcef472", "eastasia"
 speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
+speechsdk.SpeechConfig.enable_dictation()
 
 # Creates an audio configuration that points to an audio file.
 # Replace with your own audio filename.
@@ -45,7 +46,7 @@ print("Recognizing first result...")
 
 result = speech_recognizer.start_continuous_recognition()
 while not done:
-    time.sleep(.5)
+    time.sleep(1.5)
 
 speech_recognizer.stop_continuous_recognition()
 # Checks result.
