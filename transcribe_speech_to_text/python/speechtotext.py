@@ -5,7 +5,8 @@ import time
 # Replace with your own subscription key and service region (e.g., "westus").
 speech_key, service_region = "3ebb5f6b1c2f4c59b32b4abd9dcef472", "eastasia"
 speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
-speechsdk.SpeechConfig.enable_dictation()
+# Enable diction
+speech_config.enable_dictation()
 
 # Creates an audio configuration that points to an audio file.
 # Replace with your own audio filename.
